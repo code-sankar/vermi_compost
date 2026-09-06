@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
@@ -11,7 +11,15 @@ import Contact from './pages/Contact'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
-  useEffect(() => window.scrollTo(0, 0), [pathname])
+
+  // `behavior: 'instant'` matters: the stylesheet sets `scroll-behavior: smooth`
+  // for in-page anchors, which would otherwise animate this reset — and the
+  // animation gets cancelled when the new (usually shorter) route mounts,
+  // stranding the visitor partway down the page they just opened.
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [pathname])
+
   return null
 }
 

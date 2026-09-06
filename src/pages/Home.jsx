@@ -87,9 +87,19 @@ function Triptych() {
   const b = useTransform(scrollYProgress, [0, 1], ['-4%', '8%'])
   const c = useTransform(scrollYProgress, [0, 1], ['9%', '-9%'])
   const lanes = [
-    { src: '/images/hands-1.svg', alt: 'Hands cupping finished vermicompost', y: a, pad: 'lg:mt-16' },
+    {
+      src: '/images/hands-1.svg',
+      alt: 'Hands cupping finished vermicompost',
+      y: a,
+      pad: 'lg:mt-16',
+    },
     { src: '/images/worms-3.svg', alt: 'Red worms working through castings', y: b, pad: '' },
-    { src: '/images/sprouts-1.svg', alt: 'Seedlings breaking through dark soil', y: c, pad: 'lg:mt-24' },
+    {
+      src: '/images/sprouts-1.svg',
+      alt: 'Seedlings breaking through dark soil',
+      y: c,
+      pad: 'lg:mt-24',
+    },
   ]
 
   return (
@@ -144,7 +154,10 @@ function Featured() {
           <h2 className="display text-[clamp(2.2rem,5vw,4rem)]">The shelf</h2>
         </Reveal>
         <Reveal delay={0.08}>
-          <Link to="/shop" className="group inline-flex items-center gap-2 border-b border-ink/25 pb-1 text-sm">
+          <Link
+            to="/shop"
+            className="group inline-flex items-center gap-2 border-b border-ink/25 pb-1 text-sm"
+          >
             All products
             <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
           </Link>
@@ -179,7 +192,9 @@ function Process() {
           {steps.map((s, i) => (
             <Reveal key={s.n} delay={i * 0.08} className="group">
               <Img src={s.image} alt={s.title} ratio="aspect-[4/5]" zoom className="rounded-2xl">
-                <span className="display absolute bottom-3 left-4 text-6xl text-cream/85">{s.n}</span>
+                <span className="display absolute bottom-3 left-4 text-6xl text-cream/85">
+                  {s.n}
+                </span>
               </Img>
               <h3 className="display mt-5 text-2xl">{s.title}</h3>
               <p className="mt-1.5 text-sm text-cream/55">{s.line}</p>
@@ -194,11 +209,7 @@ function Process() {
 function Quote() {
   return (
     <section className="relative flex min-h-[70svh] items-center overflow-hidden">
-      <Img
-        src="/images/canopy-1.svg"
-        alt="Dense green leaf canopy"
-        fill
-      />
+      <Img src="/images/canopy-1.svg" alt="Dense green leaf canopy" fill />
       <div className="absolute inset-0 bg-ink/45" />
       <div className="relative mx-auto max-w-[1100px] px-5 py-24 text-center sm:px-8">
         <Reveal>
@@ -223,7 +234,10 @@ function Strip() {
           <h2 className="display text-[clamp(2.2rem,5vw,4rem)]">From the beds</h2>
         </Reveal>
         <Reveal delay={0.08}>
-          <Link to="/gallery" className="group inline-flex items-center gap-2 border-b border-ink/25 pb-1 text-sm">
+          <Link
+            to="/gallery"
+            className="group inline-flex items-center gap-2 border-b border-ink/25 pb-1 text-sm"
+          >
             Full gallery
             <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
           </Link>
@@ -298,7 +312,13 @@ export default function Home() {
       <Hero />
       <Marquee
         className="border-b border-ink/10 bg-cream py-4 text-sm tracking-[0.2em] uppercase text-ink/55"
-        items={['Chemical free', 'Sieved to 2mm', 'Cured 60 days', 'Delivered across Assam', 'Batch tested']}
+        items={[
+          'Chemical free',
+          'Sieved to 2mm',
+          'Cured 60 days',
+          'Delivered across Assam',
+          'Batch tested',
+        ]}
       />
       <StatBand />
       <Triptych />

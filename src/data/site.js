@@ -34,7 +34,11 @@ export const products = [
     price: 240,
     unit: '5 kg',
     image: '/images/product-vermicompost.svg',
-    shots: ['/images/product-vermicompost.svg', '/images/castings-1.svg', '/images/soil-macro-1.svg'],
+    shots: [
+      '/images/product-vermicompost.svg',
+      '/images/castings-1.svg',
+      '/images/soil-macro-1.svg',
+    ],
     sizes: ['5 kg', '25 kg', '50 kg'],
     specs: [
       ['Organic carbon', '18–22%'],

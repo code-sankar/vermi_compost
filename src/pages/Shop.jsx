@@ -9,18 +9,13 @@ export default function Shop() {
 
   const shown = useMemo(
     () => (active === 'All' ? products : products.filter((p) => p.tags.includes(active))),
-    [active]
+    [active],
   )
 
   return (
     <>
       <section className="relative h-[52svh] min-h-[380px] overflow-hidden bg-ink">
-        <Img
-          src="/images/castings-1.svg"
-          alt="Close-up of finished worm castings"
-          fill
-          priority
-        />
+        <Img src="/images/castings-1.svg" alt="Close-up of finished worm castings" fill priority />
         <div className="absolute inset-0 bg-ink/45" />
         <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1500px] px-5 pb-12 sm:px-8 lg:px-12">
           <p className="eyebrow text-cream/60">Everything we make</p>

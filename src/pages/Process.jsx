@@ -6,10 +6,22 @@ import { steps } from '../data/site'
 import { ArrowRight } from 'lucide-react'
 
 const detail = [
-  { image: '/images/beds-2.svg', title: 'Shaded troughs', line: 'Brick beds, roofed and always damp.' },
+  {
+    image: '/images/beds-2.svg',
+    title: 'Shaded troughs',
+    line: 'Brick beds, roofed and always damp.',
+  },
   { image: '/images/worms-2.svg', title: 'Eisenia fetida', line: 'Roughly 800 reds to the kilo.' },
-  { image: '/images/soil-macro-1.svg', title: 'Screened fine', line: 'Two millimetres, nothing coarser.' },
-  { image: '/images/hands-2.svg', title: 'Packed by hand', line: 'Bagged the same week it is sieved.' },
+  {
+    image: '/images/soil-macro-1.svg',
+    title: 'Screened fine',
+    line: 'Two millimetres, nothing coarser.',
+  },
+  {
+    image: '/images/hands-2.svg',
+    title: 'Packed by hand',
+    line: 'Bagged the same week it is sieved.',
+  },
 ]
 
 export default function Process() {
@@ -59,7 +71,13 @@ export default function Process() {
           <div className="mt-14 grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
             {detail.map((d, i) => (
               <Reveal key={d.title} delay={i * 0.08} className="group">
-                <Img src={d.image} alt={d.title} ratio="aspect-[4/5]" zoom className="rounded-2xl" />
+                <Img
+                  src={d.image}
+                  alt={d.title}
+                  ratio="aspect-[4/5]"
+                  zoom
+                  className="rounded-2xl"
+                />
                 <h3 className="display mt-5 text-2xl">{d.title}</h3>
                 <p className="mt-1.5 text-sm text-cream/55">{d.line}</p>
               </Reveal>

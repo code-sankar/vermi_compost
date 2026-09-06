@@ -25,7 +25,7 @@ export default function Contact() {
       data.message,
     ].join('\n')
     window.location.href = `mailto:${brand.email}?subject=${encodeURIComponent(
-      `Enquiry from ${data.name}`
+      `Enquiry from ${data.name}`,
     )}&body=${encodeURIComponent(body)}`
     setSent(true)
   }
@@ -45,7 +45,12 @@ export default function Contact() {
         <Reveal>
           <div className="space-y-9">
             {[
-              { icon: Phone, label: 'Phone', value: brand.phone, href: `tel:${brand.phone.replace(/\s/g, '')}` },
+              {
+                icon: Phone,
+                label: 'Phone',
+                value: brand.phone,
+                href: `tel:${brand.phone.replace(/\s/g, '')}`,
+              },
               { icon: Mail, label: 'Email', value: brand.email, href: `mailto:${brand.email}` },
               { icon: MapPin, label: 'Farm', value: brand.address.join(', ') },
             ].map(({ icon: Icon, label, value, href }) => (
@@ -92,7 +97,12 @@ export default function Contact() {
               ))}
               <option value="Something else">Something else</option>
             </select>
-            <textarea name="message" rows={6} placeholder="Quantity, delivery, anything else" className={field} />
+            <textarea
+              name="message"
+              rows={6}
+              placeholder="Quantity, delivery, anything else"
+              className={field}
+            />
 
             <button
               type="submit"

@@ -48,7 +48,9 @@ export default function Product() {
                   onClick={() => setShot(i)}
                   aria-label={`View image ${i + 1}`}
                   className={`w-20 overflow-hidden rounded-xl transition-opacity duration-300 sm:w-24 ${
-                    i === shot ? 'opacity-100 ring-2 ring-ink ring-offset-2 ring-offset-cream' : 'opacity-55 hover:opacity-90'
+                    i === shot
+                      ? 'opacity-100 ring-2 ring-ink ring-offset-2 ring-offset-cream'
+                      : 'opacity-55 hover:opacity-90'
                   }`}
                 >
                   <Img src={s} alt="" ratio="aspect-square" />
@@ -64,7 +66,9 @@ export default function Product() {
 
             <p className="display mt-10 text-4xl">
               ₹{product.price.toLocaleString('en-IN')}
-              <span className="ml-2 align-middle text-sm font-sans text-ink/40">/ {product.unit}</span>
+              <span className="ml-2 align-middle text-sm font-sans text-ink/40">
+                / {product.unit}
+              </span>
             </p>
 
             <div className="mt-8">
@@ -87,7 +91,9 @@ export default function Product() {
             </div>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <Button href={`mailto:${brand.email}?subject=${encodeURIComponent('Order: ' + product.name)}&body=${encodeURIComponent(enquiry)}`}>
+              <Button
+                href={`mailto:${brand.email}?subject=${encodeURIComponent('Order: ' + product.name)}&body=${encodeURIComponent(enquiry)}`}
+              >
                 Order this <ArrowRight size={16} />
               </Button>
               <Button to="/contact" variant="outline">

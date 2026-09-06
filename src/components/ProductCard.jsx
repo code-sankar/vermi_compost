@@ -18,7 +18,9 @@ export default function ProductCard({ product, ratio = 'aspect-[4/5]' }) {
 
       <div className="mt-4 flex items-baseline justify-between gap-4">
         <h3 className="display text-xl">{product.name}</h3>
-        <span className="shrink-0 text-sm text-ink/50">₹{product.price.toLocaleString('en-IN')}</span>
+        <span className="shrink-0 text-sm text-ink/50">
+          ₹{product.price.toLocaleString('en-IN')}
+        </span>
       </div>
       <p className="mt-1 text-xs tracking-wide text-ink/40">{product.unit}</p>
     </Link>

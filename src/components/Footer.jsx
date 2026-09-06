@@ -15,7 +15,9 @@ export default function Footer() {
           <div>
             <p className="display text-5xl">{brand.name}</p>
             <p className="mt-3 text-sm text-cream/60">{brand.tagline}</p>
-            <p className="display mt-10 max-w-xs text-2xl leading-tight text-cream/90">{brand.line}</p>
+            <p className="display mt-10 max-w-xs text-2xl leading-tight text-cream/90">
+              {brand.line}
+            </p>
           </div>
 
           <div>
@@ -23,7 +25,10 @@ export default function Footer() {
             <ul className="mt-5 space-y-2.5 text-sm">
               {products.slice(0, 5).map((p) => (
                 <li key={p.slug}>
-                  <Link to={`/shop/${p.slug}`} className="text-cream/70 transition-colors hover:text-cream">
+                  <Link
+                    to={`/shop/${p.slug}`}
+                    className="text-cream/70 transition-colors hover:text-cream"
+                  >
                     {p.name}
                   </Link>
                 </li>
@@ -39,7 +44,10 @@ export default function Footer() {
               ))}
             </address>
             <div className="mt-5 space-y-1 text-sm">
-              <a href={`tel:${brand.phone.replace(/\s/g, '')}`} className="block text-cream/70 hover:text-cream">
+              <a
+                href={`tel:${brand.phone.replace(/\s/g, '')}`}
+                className="block text-cream/70 hover:text-cream"
+              >
                 {brand.phone}
               </a>
               <a href={`mailto:${brand.email}`} className="block text-cream/70 hover:text-cream">
