@@ -1,0 +1,91 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --color-ink: #191108;
+  --color-soil: #3b2a1c;
+  --color-bark: #6b5136;
+  --color-moss: #42582f;
+  --color-leaf: #6d8b46;
+  --color-sage: #b9c79a;
+  --color-clay: #bd7d4c;
+  --color-sand: #e3d7c1;
+  --color-cream: #f7f2e7;
+  --color-paper: #fffdf8;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background: var(--color-moss);
+    color: var(--color-cream);
+  }
+
+  /* A slim, earthy scrollbar so the chrome matches the page. */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-sand);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-bark);
+    border-radius: 99px;
+  }
+}
+
+@layer components {
+  .display {
+    font-family: var(--font-display);
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+  }
+
+  .eyebrow {
+    font-size: 0.6875rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* Edge-to-edge band that ignores the page gutter. */
+  .bleed {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .no-bar {
+    scrollbar-width: none;
+  }
+  .no-bar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

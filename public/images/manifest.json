@@ -1,0 +1,177 @@
+[
+  {
+    "name": "hero-field",
+    "w": 2400,
+    "h": 1500
+  },
+  {
+    "name": "hero-hands",
+    "w": 1600,
+    "h": 2000
+  },
+  {
+    "name": "soil-macro-1",
+    "w": 1400,
+    "h": 1400
+  },
+  {
+    "name": "soil-macro-2",
+    "w": 1400,
+    "h": 1750
+  },
+  {
+    "name": "soil-macro-3",
+    "w": 1600,
+    "h": 900
+  },
+  {
+    "name": "castings-1",
+    "w": 1400,
+    "h": 1400
+  },
+  {
+    "name": "castings-2",
+    "w": 1200,
+    "h": 1500
+  },
+  {
+    "name": "worms-1",
+    "w": 1600,
+    "h": 1200
+  },
+  {
+    "name": "worms-2",
+    "w": 1200,
+    "h": 1500
+  },
+  {
+    "name": "worms-3",
+    "w": 1400,
+    "h": 1400
+  },
+  {
+    "name": "sprouts-1",
+    "w": 1400,
+    "h": 1750
+  },
+  {
+    "name": "sprouts-2",
+    "w": 1600,
+    "h": 1000
+  },
+  {
+    "name": "sprouts-3",
+    "w": 1400,
+    "h": 1400
+  },
+  {
+    "name": "canopy-1",
+    "w": 1400,
+    "h": 1750
+  },
+  {
+    "name": "canopy-2",
+    "w": 1600,
+    "h": 900
+  },
+  {
+    "name": "field-rows",
+    "w": 1600,
+    "h": 1000
+  },
+  {
+    "name": "field-wide",
+    "w": 2000,
+    "h": 900
+  },
+  {
+    "name": "beds-1",
+    "w": 1500,
+    "h": 1100
+  },
+  {
+    "name": "beds-2",
+    "w": 1200,
+    "h": 1500
+  },
+  {
+    "name": "hands-1",
+    "w": 1400,
+    "h": 1400
+  },
+  {
+    "name": "hands-2",
+    "w": 1600,
+    "h": 1000
+  },
+  {
+    "name": "pot-1",
+    "w": 1200,
+    "h": 1500
+  },
+  {
+    "name": "pot-2",
+    "w": 1400,
+    "h": 1400
+  },
+  {
+    "name": "texture-1",
+    "w": 1600,
+    "h": 900
+  },
+  {
+    "name": "texture-2",
+    "w": 1200,
+    "h": 1500
+  },
+  {
+    "name": "texture-3",
+    "w": 1400,
+    "h": 1400
+  },
+  {
+    "name": "product-vermicompost",
+    "w": 1200,
+    "h": 1500
+  },
+  {
+    "name": "product-neem",
+    "w": 1200,
+    "h": 1500
+  },
+  {
+    "name": "product-potting-mix",
+    "w": 1200,
+    "h": 1500
+  },
+  {
+    "name": "product-bulk",
+    "w": 1200,
+    "h": 1500
+  },
+  {
+    "name": "product-vermiwash",
+    "w": 1200,
+    "h": 1500
+  },
+  {
+    "name": "product-tea",
+    "w": 1200,
+    "h": 1500
+  },
+  {
+    "name": "product-bin",
+    "w": 1200,
+    "h": 1500
+  },
+  {
+    "name": "product-worms",
+    "w": 1200,
+    "h": 1500
+  },
+  {
+    "name": "product-starter",
+    "w": 1200,
+    "h": 1500
+  }
+]
